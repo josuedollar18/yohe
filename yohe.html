@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d2c54; /* Fondo azul oscuro inspirado en Stitch */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+        h1 {
+            color: #e74c3c;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        .stitch {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 300px;
+            z-index: 1;
+            opacity: 0.8;
+        }
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        .heart {
+            position: absolute;
+            color: #ff6f61;
+            font-size: 20px;
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Yoheidy Soto!</h1>
+        <p>¿Quieres ser mi San Valentín?</p>
+        <button onclick="responder()">¡Sí, quiero!</button>
+        <button onclick="responder()">¡No, no quiero!</button>
+    </div>
+
+    <!-- Imagen de Stitch -->
+    <img src="https://lumiere-a.akamaihd.net/v1/images/stitch_16x9_9ac13651.png?region=0,0,1152,648&width=960" alt="Stitch" class="stitch">
+
+    <!-- Corazones flotantes -->
+    <div class="hearts">
+        <div class="heart" style="top: 10%; left: 20%;">❤️</div>
+        <div class="heart" style="top: 20%; left: 80%;">❤️</div>
+        <div class="heart" style="top: 50%; left: 10%;">❤️</div>
+        <div class="heart" style="top: 70%; left: 90%;">❤️</div>
+        <div class="heart" style="top: 90%; left: 50%;">❤️</div>
+    </div>
+
+    <script>
+        function responder() {
+            alert('¡Gracias por aceptar ser mi San Valentín, Mi Polli 🐥 ! Te Amo Mucho. ❤️');
+        }
+    </script>
+</body>
+</html>
